@@ -1,9 +1,10 @@
 .single-page
-  .container
-    .blog-post
-      .category-clas
-        span.category #{@blog_post.category}
-      h2 #{@blog_post.title }
-      p #{@blog_post.description}
-        
+  .blog-post.box
+    .category-clas
+      span.category #{@blog_post.category}
+    h2 #{@blog_post.title }
+    p #{@blog_post.description}
+
+    = link_to "Edit",edit_blog_post_path,class:'btn btn-sm'
+    
         

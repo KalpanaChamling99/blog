@@ -23,10 +23,22 @@ class BlogPostsController < ApplicationController
     end
   end
 
+  def edit
+    @blog_post = BlogPost.find(params[:id])
+  end
+
+  def update
+    @blog_post = BlogPost.find(params[:id])
+    if @blog_post.update(post_params)
+      redirect_to @blog_post
+    else
+      render :edit,status: :unprocessabl
+    end
+  end
+
   private 
     def post_params
       params.require(:blog_post).permit(:title, :description, :category, :image)
     end
-
 
 end

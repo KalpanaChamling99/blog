@@ -1,0 +1,33 @@
+.form-section
+  = form_with model: blog_post do |form|
+    / -if form.object.errors.any?
+    /   -form.object.errors.full_messages.each do | message |
+    /     p.error-msg #{message}
+    
+    .form-group.pt-3
+      = form.label :title, "Post Title",class:'mt-2'
+      = form.text_field :title, placeholder:'Enter Post title',class:'mt-2'
+      - if @blog_post.errors[:title].any?
+        p.error-msg= @blog_post.errors.full_messages_for(:title).first
+
+
+    .form-group.pt-3
+      = form.label :description, "Post description",class:'mt-2'
+      = form.text_area :description, placeholder:'Enter Post desc',class:'mt-2'
+      
+      - if @blog_post.errors[:description].any?
+        p.error-msg= @blog_post.errors.full_messages_for(:description).first
+    
+    .form-group.pt-3
+      = form.label :image, "Post image",class:'mt-2'
+      = form.text_field :image, placeholder:'upload',class:'mt-2'
+
+    
+    .form-group.pt-3
+      = form.label :category, "Post Category",class:'mt-2'
+      = form.text_field :category, placeholder:'Enter Post category',class:'mt-2'
+      - if @blog_post.errors[:category].any?
+        p.error-msg= @blog_post.errors.full_messages_for(:category).first
+
+    .mt-6
+      = form.submit "#{btn_text}",class:'btn'
