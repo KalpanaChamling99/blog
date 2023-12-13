@@ -1,0 +1,15 @@
+.container
+  .title-section.d-flex.justify-between
+    h2.m-0 Blog List
+    = link_to "Add Blog",new_blog_post_path,class:'add-btn'
+
+  ul
+    - @blog_post_list.each do |post|
+      li.blog-post
+        .category-section
+          = link_to post.category,blog_post_path(post.id) ,class:'category'
+        h2
+          = link_to post.title,blog_post_path(post.id) 
+        p #{post.description}
+     
+

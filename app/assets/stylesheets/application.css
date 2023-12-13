@@ -31,6 +31,37 @@ body{
   margin: auto;
   max-width: 100%;
 }
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.add-btn,
+.submit-btn{
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+  font-family: inherit;
+}
+.add-btn{
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+.submit-btn{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  border: 0;
+}
+.m-0{
+  margin: 0;
+}
 .category{
   display: inline-block;
   font-size: 14px;
@@ -59,4 +90,20 @@ ul{
 .blog-post p{
   margin: 0;
   padding-top: 10px;
+}
+label,
+.form-group textarea,
+.form-group input{
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-family: inherit;
+}
+input{
+  margin-top: 15px;
+}
+.error-msg{
+  color: #b90e0a;
+  font-size: 13px;
+  font-weight: 600;
 }
