@@ -13,10 +13,26 @@
   </head>
 
   <body>
+    <header>
+      <div class="container-fluid">
+        <div class ="wrapper d-flex justify-between align-center">
+
+          <h1 class="m-0">
+            <%= link_to "Homepage",root_path %>
+          </h1>
+          
+          <div class="d-flex">
+            <%= link_to "Login",new_user_session_path %>
+            <%= button_to "Logout",destroy_user_session_path, method: :delete %>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
     <div class="container">
-      <h1>
-        <%= link_to "Homepage",root_path %>
-      </h1>
+      <p class="notice d-none"><%= notice %></p>
+      <p class="alert d-none"><%= alert %></p>
       <%= yield %>
     </div>    
   </body>

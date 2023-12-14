@@ -1,0 +1,17 @@
+label,
+textarea,
+input[type='text']{
+  display: block;
+  width: 100%;
+  font-family: inherit;
+}
+textarea,
+input[type='text']{
+  padding: 10px 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  outline: 0;
+}
+textarea{
+  height: 130px;
+}

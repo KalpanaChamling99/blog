@@ -1,0 +1,18 @@
+$corner:(
+  p padding,
+  pt padding-top,
+  pl padding-left,
+  pb padding-bottom,
+  pr padding-right
+);
+
+.p-0{
+  padding: 0;
+}
+@each $padding in $corner{
+  @for $i from 0 through 12{
+    .#{nth($padding,1)}-#{$i}{
+      #{nth($padding,2)} : $i * 5px;
+    }
+  }
+}

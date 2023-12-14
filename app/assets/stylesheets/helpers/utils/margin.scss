@@ -1,0 +1,28 @@
+$corner:(
+  mt margin-top,
+  ml margin-left,
+  mb margin-bottom,
+  mr margin-right
+);
+
+.m-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mr-auto{
+  margin-right: auto;
+}
+// margin
+.m-0{
+  margin: 0;
+}
+@each $margin in $corner{
+  @for $i from 0 through 12{
+    .#{nth($margin,1)}-#{$i}{
+      #{nth($margin,2)} : $i * 5px;
+    }
+  }
+}

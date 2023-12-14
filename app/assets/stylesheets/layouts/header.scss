@@ -1,0 +1,16 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  color: #fff;
+  background-color: #000;
+  .wrapper{
+    height: 60px;
+  }
+  a{
+    color: #fff;
+  }
+}

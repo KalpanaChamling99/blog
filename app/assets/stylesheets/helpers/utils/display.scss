@@ -1,0 +1,10 @@
+$displayList:none,block,initial,inline-block;
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+@each $display in $displayList{
+  .d-#{$display}{
+    display: $display;
+  }
+}
