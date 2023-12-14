@@ -1,7 +1,7 @@
 .pt-9
   .title-section.d-flex.justify-between
     h2.m-0 Blog List
-    = link_to "Add Blog",new_blog_post_path,class:'btn btn-sm'
+    = link_to "Add Blog",new_blog_post_path,class:'btn btn-sm' if user_signed_in?
 
   ul.reset-ul
     - @blog_post_list.each do |post|

@@ -4,7 +4,9 @@
       span.category #{@blog_post.category}
     h2 #{@blog_post.title }
     p #{@blog_post.description}
-
-    = link_to "Edit",edit_blog_post_path,class:'btn btn-sm'
+    -if user_signed_in?
+      .d-flex
+        = link_to "Edit",edit_blog_post_path,class:'btn btn-sm' if user_signed_in?
+        = button_to "Delete",@blog_post,class:'btn btn-sm ml-3',method: :delete,data:{turbo_confirm:"are you sure"}
     
         
