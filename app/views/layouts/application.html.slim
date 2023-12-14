@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title Blog
+    meta name="viewport" content="width=device-width,initial-scale=1"
+    = csrf_meta_tags
+    = csp_meta_tag
+    link rel="preconnect" href="https://fonts.googleapis.com"
+    link rel="preconnect" href="https://fonts.gstatic.com"
+    link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+
+  body
+    header
+      .container-fluid
+        .wrapper.d-flex.justify-between.align-center
+          h1.m-0
+            -if user_signed_in?
+              = link_to "Dashboard",root_path  
+            -else
+              = link_to "Blog",root_path  
+          
+          .d-flex
+            -if user_signed_in?
+              = button_to "Logout",destroy_user_session_path, method: :delete 
+            -else
+              = link_to "Login",new_user_session_path 
+    .container
+      p.notice.d-none = notice
+      p.notice.d-none = alert
+    
+      = yield
+
