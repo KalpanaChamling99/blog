@@ -1,0 +1,7 @@
+nav.nav-sidebar-section 
+  ul.primary-menu.reset-ul 
+    li 
+      = link_to "Dashboard",root_path 
+    li 
+      = link_to "Add Blog",new_blog_post_path
+      / if user_signed_in?

@@ -6,7 +6,7 @@ header{
   z-index: 10;
   height: 60px;
   color: #fff;
-  background-color: #000;
+  background-color: #212427;
   .wrapper{
     height: 60px;
   }
@@ -18,5 +18,12 @@ header{
     padding: 0;
     background-color: transparent;
     color: #fff;
+  }
+  .logo-wrapper{
+    height: 55px;
+    width: 55px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
