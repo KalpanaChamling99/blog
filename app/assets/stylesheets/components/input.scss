@@ -7,6 +7,11 @@ input[type='password']{
   width: 100%;
   font-family: inherit;
 }
+button{
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
 textarea,
 input[type='text'],
 input[type='email'],
@@ -18,4 +23,9 @@ input[type='password']{
 }
 textarea{
   height: 130px;
+}
+label{
+  &.w-auto{
+    width: auto;
+  }
 }
