@@ -4,8 +4,13 @@
       span.category #{@blog_post.category}
     h2 #{@blog_post.title }
     p #{@blog_post.description}
+
+    -if @blog_post.image.present?
+      .mt-3
+        = image_tag @blog_post.image,class:'asjhasdjhsa'
+
     -if user_signed_in?
-      .d-flex
+      .d-flex.mt-3
         = link_to "Edit",edit_blog_post_path,class:'btn btn-sm' if user_signed_in?
         = button_to "Delete",@blog_post,class:'btn btn-sm ml-3',method: :delete,data:{turbo_confirm:"are you sure"}
     
